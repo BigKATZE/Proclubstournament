@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="https://kit.fontawesome.com/4550c27a12.js" crossorigin="anonymous"> </script> -->
+    <style>
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: #1a1a1a;
+    }
+
+    #horizontal-menu {
+        display: flex;
+        justify-content: flex-end;
+        color: white;
+        text-decoration: none;
+        list-style: none;
+        position: fixed; /* Changed from absolute to fixed */
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: transparent;
+    }
+
+    #horizontal-menu li {
+        display: block;
+        padding: 10px;
+        margin: 30px;
+    }
+
+    #horizontal-menu a {
+        color: rgba(241, 241, 241, 0.697);
+        text-decoration: none;
+        font-size: 29px;
+        opacity: 0.8;
+        font-weight: 900;
+    }
+
+    #horizontal-menu li:hover {
+        border-bottom: 2px solid white;
+        transform: scale(1.1);
+        transition: 0.1s;
+        opacity: 1;
+    }
+
+    #horizontal-menu li:hover a {
+        color: white;
+        text-decoration: none;
+        font-size: 29px;
+        opacity: 1;
+        transition: 0.2s;
+    }
+
+    #logo {
+    position: fixed; 
+    top: 0;
+    left: 20px; 
+    width: 300px;
+    transition: transform 0.2s ease-in-out; 
+}
+    #logo:hover {
+        transform: scale(1.2);
+    }
+
+    @keyframes pageTransition {
+        0% {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    #overskrift {
+        color: white;
+        font-size: 50px;
+        text-align: center;
+        margin-top: 100px;
+        animation: pageTransition 0.5s ease-in-out;
+        font-family: monospace;
+        top: 10%;
+        left: 25%;
+        position: absolute;
+        text-decoration:underline rgba(255, 255, 255, 0.268);
+    }
+
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul id="horizontal-menu">
+                <li><a href="../index.html"><i class="fa-solid fa-house-chimney"></i> Hjem</a></li>
+                <li><a href="../gruppeOldOrNew.html"><i class="fa-solid fa-people-group"></i> Grupper</a></li>
+                <li><a href="../utslagsAorB.html"><img src="bilder/bracket.png" alt="" id="bracket"></i> Utslagsrunder</a></li>
+            </ul>
+        </nav>
+    </header>
+    <a href="index.html"><img src="../bilder/proClubsLogo.png" alt="proClubsLogo" id="logo" draggable="false"></a>
+    <h2 id="overskrift">Proclubstournaments.no sine regler </h2>
+    
+</body>
+</html>
