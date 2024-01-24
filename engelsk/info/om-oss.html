@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About us</title>
+    <script src="https://kit.fontawesome.com/4550c27a12.js" crossorigin="anonymous"> </script>
+    <style>
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: #1a1a1a;
+        overflow: hidden;
+    }
+
+    #horizontal-menu {
+        display: flex;
+        justify-content: flex-end;
+        color: white;
+        text-decoration: none;
+        list-style: none;
+        /* position: fixed; */ /* Remove this line */
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: transparent;
+    }
+
+    #horizontal-menu li {
+        display: block;
+        padding: 10px;
+        margin: 30px;
+    }
+
+    #horizontal-menu a {
+        color: rgba(241, 241, 241, 0.697);
+        text-decoration: none;
+        font-size: 29px;
+        opacity: 0.8;
+        font-weight: 900;
+    }
+
+    #horizontal-menu li:hover {
+        border-bottom: 2px solid white;
+        transform: scale(1.1);
+        transition: 0.1s;
+        opacity: 1;
+    }
+
+    #horizontal-menu li:hover a {
+        color: white;
+        text-decoration: none;
+        font-size: 29px;
+        opacity: 1;
+        transition: 0.2s;
+    }
+
+    #logo {
+    position: fixed; 
+    top: 0;
+    left: 20px; 
+    width: 300px;
+    transition: transform 0.2s ease-in-out; 
+}
+    #logo:hover {
+        transform: scale(1.2);
+    }
+
+    @keyframes pageTransition {
+        0% {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    #overskrift {
+        color: white;
+        font-size: 50px;
+        text-align: center;
+        margin-top: 100px;
+        animation: pageTransition 0.5s ease-in-out;
+        font-family: monospace;
+        top: 0%;
+        left: 45%;
+        position: fixed;
+        text-decoration:underline rgba(255, 255, 255, 0.268);
+    }
+
+    #chiesa-img {
+        position: absolute;
+        top: 41%;
+        left: 45%;
+        width: 70%;
+        animation: pageTransition 0.5s ease-in-out;
+    }
+    
+    #haaland-img {
+        position: absolute;
+        top: 30%;
+        left: -9%;
+        width: 40%;
+        animation: pageTransition 0.5s ease-in-out;
+    }
+
+    #om-oss-paragraf {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 50%;
+        animation: pageTransition 0.5s ease-in-out;
+        color: aliceblue;
+        font-size: 20px;
+        font-family: monospace;
+    }
+    #discord-link  {
+        color: rgb(241, 241, 241);
+        text-decoration: none;
+        font-weight: bolder;
+    }
+    #kjop-billett {
+    position: fixed;
+    background: #323232;
+    color: rgba(241, 241, 241, 0.697);
+    text-decoration: none;
+    text-transform: uppercase;
+    border: none;
+    letter-spacing: 0.1rem;
+    font-size: 2rem;
+    padding: 2rem 4rem;
+    transition: 0.2s;
+    top: 3.5%;
+    left: 20%;
+    border-radius: 100px;
+    box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.5);
+    font-family:monospace;
+  }
+  
+  #kjop-billett:hover {
+    letter-spacing: 0.2rem;
+    padding: 1.1rem 3.1rem;
+    background: var(--clr);
+    box-shadow: 0 0 35px var(--clr);
+    animation: box 3s infinite;
+    cursor: pointer;
+  }
+  
+  #kjop-billett::before {
+    position: absolute;
+    inset: 2px;
+    background: #272822;
+  }
+  
+  #kjop-billett span {
+    position: relative;
+    z-index: 1;
+  }
+  #kjop-billett i {
+    position: absolute;
+    inset: 0;
+    display: block;
+  }
+  
+  #kjop-billett i::before {
+    position: absolute;
+    width: 10px;
+    height: 2px;
+    left: 80%;
+    top: -2px;
+    border: 2px solid var(--clr);
+    background: #272822;
+    transition: 0.2s;
+  }
+  
+  #kjop-billett:hover i::before {
+    width: 15px;
+    left: 20%;
+    animation: move 3s infinite;
+  }
+  
+  #kjop-billett i::after {
+    position: absolute;
+    width: 10px;
+    height: 2px;
+    left: 20%;
+    bottom: -2px;
+    border: 2px solid var(--clr);
+    background: #272822;
+    transition: 0.2s;
+  }
+  
+  #kjop-billett:hover i::after {
+    width: 15px;
+    left: 80%;
+    animation: move 3s infinite;
+  }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul id="horizontal-menu">
+                <li><a href="../index.html"><i class="fa-solid fa-house-chimney"></i> Home</a></li>
+                <li><a href="../gruppeOldOrNew.html"><i class="fa-solid fa-people-group"></i> Groups</a></li>
+                <li><a href="../utslagsAorB.html"><img src="bilder/bracket.png" alt="" id="bracket"></i> Knockout stages</a></li>
+            </ul>
+        </nav>
+    </header>
+    <a href="../index.html"><img src="../bilder/proClubsLogo.png" alt="proClubsLogo" id="logo" draggable="false"></a>
+    <h2 id="overskrift">About us</h2>
+    <img src="../bilder/chiesa.png" alt="" id="chiesa-img">
+    <img src="../bilder/haaland celebration.png" alt="" id="haaland-img">
+    <a href="https://41ce31-4.myshopify.com/products/proclubs-turnering" target="_blank"><button id="kjop-billett">Purchase ticket</button></a>
+
+
+    <div id="om-oss-paragraf">
+        <h3>Who's Proclubstournament.com?</h3>
+        <p>
+            Proclubstournaments.no is a newly created ... that organises proclub tournaments on EA FC 24. 
+            We aim to create a great experience for everyone who participates in our tournaments, and we hope that you will join us on our journey.
+        </p>
+        <p>
+            We have capacity for 96 teams, 48 for Old Gen (PS4/Xbox One) and 48 New Gen (PS5 & Xbox Series X), 
+            but we also have a future desire to expand the number of possible layers.   
+        </p>
+        <br>
+        <h3>How do the tournaments work?</h3>
+        <p>
+            All communication takes place on our Discord server, <a href="https://discord.gg/egYUnpcyR8" id="discord-link" target="_blank">link here,</a>
+            so to participate in our tournaments you need to be a member of our discord server.
+        </p>
+        <p>
+            As of today, we have 16 groups, 8 for Old Gen and 8 for New Gen, with 6 teams per group. 
+            Everyone plays 1 match against each other, and the 1-3 go on to the a-playoffs, while place 4 goes to the b-playoffs 
+            and places 5 and 6 are out of the tournament.
+        </p>
+    </div>
+
+</body>
+</html>

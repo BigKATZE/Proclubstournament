@@ -1,0 +1,502 @@
+body {
+    background-color: rgba(41,40,38,255);
+    animation: pageTransition 0.5s ease-in-out;
+    overflow-y: scroll; /* Endret til å tillate vertikal scrolling */
+    overflow-x: hidden; /* Skjuler horisontal scrolling */
+    margin: 0rem;
+}
+
+#kjop-billett {
+    position: fixed;
+    background: rgba(208, 208, 208, 0.697);
+    color: rgba(22, 22, 22, 0.719);
+    text-decoration: none;
+    text-transform: uppercase;
+    border: none;
+    letter-spacing: 0.1rem;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 2rem 4rem;
+    transition: 0.2s;
+    top: 3.5%;
+    left: 20%;
+    border-radius: 100px;
+    box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.5);
+    font-family: monospace;
+}
+
+#kjop-billett:hover {
+    letter-spacing: 0.2rem;
+    padding: 1.1rem 3.1rem;
+    background: var(--clr);
+    box-shadow: 0 0 35px var(--clr);
+    animation: box 3s infinite;
+    cursor: pointer;
+    color: white;
+}
+
+/* Media Query for Mobile */
+@media (max-width: 767px) {
+    body {
+        font-size: 14px;
+    }
+
+    #kjop-billett {
+        font-size: 1.5rem;
+        padding: 1.5rem 3rem;
+        top: 5%;
+        left: 10%;
+    }
+
+    #kjop-billett::before {
+        inset: 1px;
+    }
+
+    #kjop-billett span {
+        font-size: 0.8rem;
+    }
+
+    #kjop-billett i::before {
+        width: 8px;
+        height: 1px;
+        left: 70%;
+        top: -1px;
+    }
+
+    #kjop-billett:hover i::before {
+        width: 12px;
+        left: 15%;
+    }
+
+    #kjop-billett i::after {
+        width: 8px;
+        height: 1px;
+        left: 15%;
+        bottom: -1px;
+    }
+
+    #kjop-billett:hover i::after {
+        width: 12px;
+        left: 70%;
+    }
+
+    #kjop-billett i {
+        font-size: 60px;
+    }
+
+    #affiliate {
+        margin: 5px;
+        font-size: 8px;
+    }
+
+    #horizontal-menu li {
+        padding: 5px;
+        margin: 15px;
+    }
+
+    #horizontal-menu a {
+        font-size: 20px;
+    }
+
+    #horizontal-menu li:hover {
+        margin-bottom: 10px;
+        transform: scale(1);
+    }
+
+    #horizontal-menu li:hover a {
+        font-size: 20px;
+    }
+
+    #logo {
+        width: 200px;
+    }
+
+    #footer {
+        height: 400px;
+    }
+
+    #social-media-links {
+        margin: 10px;
+        gap: 20px;
+        width: 15rem;
+    }
+
+    #social-media-links li {
+        padding: 5px;
+        margin: 15px;
+        font-size: 100px;
+    }
+
+    #tiktok {
+        margin-left: 50px;
+    }
+
+    #discord-link {
+        top: 2.25%;
+        right: 40%;
+        margin: 10px;
+    }
+
+    #discord-link i {
+        font-size: 40px;
+        margin-right: 5px;
+    }
+
+    #discord-link p {
+        margin: 15px;
+        font-size: 1.5rem;
+    }
+
+    #info {
+        top: 4%;
+        left: 8.7%;
+        margin: 10px;
+        font-size: 1.5rem;
+    }
+
+    #om-oss {
+        top: 10%;
+        left: 8.7%;
+        margin: 10px;
+        font-size: 1rem;
+    }
+
+    #regler {
+        top: 15%;
+        left: 8.7%;
+        margin: 10px;
+        font-size: 1rem;
+    }
+
+    #sosiale-medier {
+        top: 0.75%;
+        left: 0%;
+        margin: 10px;
+        font-size: 1.5rem;
+    }
+
+    #footer-img {
+        right: -30%;
+        width: 40%;
+    }
+
+    #informasjon {
+        top: 6%;
+        left: 8.5%;
+        margin: 10px;
+        font-size: 1.25rem;
+    }
+
+    #del1 {
+        padding: 30px;
+        grid-template-columns: 100%;
+        grid-gap: 2%;
+        font-size: 1rem;
+    }
+
+    #overskrift {
+        font-size: 3.5rem;
+        top: 15%;
+        left: 8.5%;
+    }
+}
+
+#kjop-billett::before {
+    position: absolute;
+    inset: 2px;
+    background: #ffffff;
+}
+
+#kjop-billett span {
+    position: relative;
+    z-index: 1;
+}
+
+#kjop-billett i {
+    position: absolute;
+    inset: 0;
+}
+
+#kjop-billett i::before {
+    position: absolute;
+    width: 10px;
+    height: 2px;
+    left: 80%;
+    top: -2px;
+    border: 2px solid var(--clr);
+    background: #272822;
+    transition: 0.2s;
+}
+
+#kjop-billett:hover i::before {
+    width: 15px;
+    left: 20%;
+    animation: move 3s infinite;
+}
+
+#kjop-billett i::after {
+    position: absolute;
+    width: 10px;
+    height: 2px;
+    left: 20%;
+    bottom: -2px;
+    border: 2px solid var(--clr);
+    background: #272822;
+    transition: 0.2s;
+}
+
+#kjop-billett:hover i::after {
+    width: 15px;
+    left: 80%;
+    animation: move 3s infinite;
+}
+
+#affiliate {
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0%;
+    left: 0;
+    margin: 10px;
+    font-size: 10px;
+}
+
+#horizontal-menu {
+    display: flex;
+    justify-content: flex-end;
+    color: white;
+    text-decoration: none;
+    list-style: none;
+    position: fixed; /* Changed from absolute to fixed */
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    text-shadow: 15px 15px 15px (0, 0, 0, 0.5);
+}
+
+#horizontal-menu li {
+    display: block;
+    padding: 10px;
+    margin: 30px;
+}
+
+#horizontal-menu a {
+    color: rgba(241, 241, 241, 0.697);
+    text-decoration: none;
+    font-size: 29px;
+    opacity: 0.8;
+    font-weight: 900;
+}
+
+#horizontal-menu li:hover {
+    border-bottom: 2px solid white;
+    transform: scale(1.1);
+    transition: 0.1s;
+    opacity: 1;
+}
+
+#horizontal-menu li:hover a {
+    color: white;
+    text-decoration: none;
+    font-size: 29px;
+    opacity: 1;
+    transition: 0.2s;
+}
+
+#logo {
+    position: fixed;
+    top: 0;
+    left: 20px;
+    width: 300px;
+    transition: transform 0.2s ease-in-out;
+}
+
+#logo:hover {
+    transform: scale(1.2);
+}
+
+@keyframes pageTransition {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#footer {
+    /* border-top: 10px solid rgba(0, 0, 0, 0.582); */
+    display: flex;
+    flex-direction: column; /* Changed to column */
+    position: absolute;
+    background-color: rgba(164, 164, 164, 0.816);
+    width: auto;
+    height: 600px;
+    left: 0;
+    right: 0;
+}
+
+#social-media-links {
+    list-style: none;
+    margin: 20px;
+    gap: 40px;
+    width: 20rem;
+}
+
+#social-media-links a {
+    color: black;
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+#social-media-links li {
+    display: block;
+    padding: 10px;
+    margin: 30px;
+    font-size: 175px;
+    font-family: monospace;
+}
+
+#tiktok {
+    margin-left: 100px;
+}
+
+#discord-link {
+    display: absolute;
+    justify-content: center; /* Changed to center */
+    align-items: flex-start;
+    font-family: monospace;
+    list-style: none;
+    position: absolute;
+    top: 3.25%;
+    right: 45%;
+    margin: 20px;
+}
+
+#discord-link a {
+    color: black;
+    text-decoration: none;
+    opacity: 0.8;
+    display: flex;
+    align-items: center;
+}
+
+#discord-link i {
+    font-size: 80px;
+    margin-right: 10px;
+}
+
+#discord-link p {
+    display: absolute;
+    margin: 30px;
+    font-size: 2rem;
+    font-family: monospace;
+    font-weight: bold;
+}
+
+#info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: monospace;
+    list-style: none;
+    position: absolute;
+    top: 8%;
+    left: 17.4%;
+    margin: 20px;
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+#om-oss {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: monospace;
+    list-style: none;
+    position: absolute;
+    top: 20%;
+    left: 17.4%;
+    margin: 20px;
+    font-size: 1.5rem;
+    color: #272822;
+}
+
+#regler {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: monospace;
+    list-style: none;
+    position: absolute;
+    top: 30%;
+    left: 17.4%;
+    margin: 20px;
+    font-size: 1.5rem;
+    color: #272822;
+}
+
+#sosiale-medier {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: monospace;
+    list-style: none;
+    position: absolute;
+    top: 1.5%;
+    left: 0%;
+    margin: 20px;
+    font-size: 2rem;
+}
+
+#footer-img {
+    position: absolute;
+    bottom: 0%;
+    right: -40%; /* Changed to center */
+    transform: translateX(-50%); /* Added to center horizontally */
+    width: 60%;
+    object-fit: cover;
+    opacity: 0.75;
+    justify-content: center;
+    align-items: center;
+}
+
+#informasjon {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s, transform 0.5s;
+}
+
+#informasjon.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#del1 {
+    background-color: #1e1e1e;
+    color: white;
+    padding: 50px;
+    width: 100%;
+    margin-top: -20px;
+    font-family: monospace, sans-serif;
+    display: grid;
+    grid-template-columns: 48% 48%;
+    grid-gap: 4%;
+    font-size: 1.25rem;
+}
+
+#overskrift {
+    position: absolute;
+    font-size: 5.5rem;
+    font-weight: bolder;
+    margin-bottom: 20px;
+    top: 27.5%;
+    left: 13.5%;
+    text-transform: uppercase;
+    color: #ffffffc0;
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+}

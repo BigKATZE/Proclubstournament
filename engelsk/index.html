@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">    
+    <title>Pro Clubs Tournaments</title>
+    <link rel="stylesheet" href="stylesheets/stilark.css" type="text/css">
+    <script src="https://kit.fontawesome.com/4550c27a12.js" crossorigin="anonymous"> </script>
+    <style>
+    @media screen and (max-width: 768px) {
+        #horizontal-menu {
+            justify-content: space-around;
+    }
+
+    #horizontal-menu li {
+        margin: 0;
+        padding: 10px;
+        }
+
+    #logo {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    }   
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul id="horizontal-menu">
+                <li><a href="#"><i class="fa-solid fa-house-chimney"></i> Home</a></li>
+                <li><a href="gruppeOldOrNew.html"><i class="fa-solid fa-people-group"></i> Groups</a></li>
+                <li><a href="utslagsAorB.html"><img src="bilder/bracket.png" alt="" id="bracket"></i> Knockout stages</a></li>
+                <li><a href="../norsk/index.html"><img src="bilder/nor.png" alt="" width="50px"></a></li>
+                <li><a href=""><img src="bilder/UK.png" alt="" width="50px"></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1 id="overskrift">Proclubstournament.com</h1>
+
+    <img src="bilder/bakgrunn.png" alt="bakgrunnsbilde" id="bakgrunnsbilde" draggable="false">
+    <a href="index.html"><img src="bilder/proClubsLogo.png" alt="proClubsLogo" id="logo" draggable="false"></a>
+    <a href="https://41ce31-4.myshopify.com/products/proclubs-turnering" target="_blank"><button id="kjop-billett">Purchase ticket</button></a>
+    <div id="informasjon">
+        <section id="del1">
+            <div class="om-ossH-container">
+                <h2 id="om-ossH1">Who are proclubstournament.com?</h2>
+                <p class="om-ossP">We are a newly established organiser that arranges proclub tournaments on EA FC 24,</p>
+                <p class="om-ossP">for both newgen and old gen. Right now we have the capacity</p>
+                <p class="om-ossP">for 96 layers, 48 for New Gen and 48 for Old Gen</p>
+            </div>
+
+            <div class="del2">
+                <h2 id="om-ossH2">Who can join?</h2>
+                <p class="om-ossP2">Anyone who wants to play can join!</p>
+                <p class="om-ossP2">The price is 195kr (15£ / 17€) per team and the only requirement we have is </p>
+                <p class="om-ossP2">that you must join the discord server, as that's where the communication takes place.</p>
+            </div>
+        </section>
+    </div>
+    <div id="footer">
+        <footer>
+            <ul id="social-media-links">
+                <li><a href="https://www.instagram.com/proclubstournaments.no/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                <li id="tiktok"><a href="https://www.tiktok.com/@proclubstournaments.no?_t=8j76MfaIO6y&_r=1" target="_blank"><i class="fa-brands fa-tiktok"></i></a></li>
+            </ul>
+            <ul id="discord-link">
+                <p id="discord-p">Join our discord:</p>
+                <li><a href="https://discord.gg/egYUnpcyR8" target="_blank"><img src="bilder/discord.png" alt="" width="250vmin"></a></li>
+            </ul>
+            <p id="info">Information</p>
+            <a href="info/om-oss.html"><p id="om-oss">About us</p></a>
+            <a href="info/regler.html"><p id="regler">Rules</p></a>
+            <img src="bilder/proClubsLogo.png" alt="" id="footer-img">
+            <p id="affiliate">This tournament is not affiliated with or sponsored by Electronic Arts Inc. or its licensors.</p>
+        </footer>
+    </div>
+    <script>
+        window.addEventListener('scroll', function() {
+            var informasjon = document.getElementById('informasjon');
+            var informasjonPosition = informasjon.getBoundingClientRect().top;
+            var screenPosition = window.innerHeight / 1.3;
+
+            if (informasjonPosition < screenPosition) {
+                informasjon.classList.add('show');
+            }
+        });
+    </script>
+</body>
+</html>
